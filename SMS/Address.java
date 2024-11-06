@@ -28,10 +28,9 @@ public class Address {
     public void setPostalCode(int postalCode) {
         this.postalCode = postalCode;
     }
-    public String senderInfo(){
-        return String.format("Sender's address: %s %d %s", getCity(), getPostalCode(), getCountry());
-    }
-    public String receiverInfo(){
-        return String.format("Receiver's address: %s %d %s", getCity(), getPostalCode(), getCountry());
+    //Overriden medthod toString()
+    @Override
+    public String toString(){
+        return String.format("City: %s\nPostal Code: %d\nCountry: %s",getCity(),getPostalCode(),getCountry());
     }
 }
