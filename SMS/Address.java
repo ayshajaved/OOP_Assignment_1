@@ -3,6 +3,9 @@ public class Address {
     private String country;
     private int postalCode;
     Address(String city, String country, int code){
+        if(city == null || country == null || city.isEmpty() || country.isEmpty()){        //Exception handling
+            throw new IllegalArgumentException("City and Country cannot be null or empty");
+        }
         this.city = city;
         this.country = country;
         this.postalCode = code;

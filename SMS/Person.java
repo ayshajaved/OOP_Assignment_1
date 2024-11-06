@@ -3,6 +3,9 @@ public class Person{
     private String contactNumber;
     private String email;
     Person(String name, String contact, String email){
+        if (name == null || contact == null || email == null || name.isEmpty() || contact.isEmpty() || email.isEmpty()){        //Exception handling
+            throw new IllegalArgumentException("Name, Contact and Email cannot be null or empty");
+        }
         this.name = name;
         this.contactNumber = contact;
         this.email = email;
